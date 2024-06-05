@@ -1,13 +1,18 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+form {
+    place-items: center;
+}
 
 .card {
-    background-color: aqua;
+    background-color: #55423d;
     padding: 3%;
     margin: 2%;
+    border-radius: 20px;
+    text-align: center;
 }
 
 .card-text {
-    font-size: medium;
+}
+
+button {
+    background-color: ;
 }
