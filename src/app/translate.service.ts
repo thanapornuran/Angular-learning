@@ -8,14 +8,8 @@ import { Observable } from 'rxjs';
 export class TranslateService {
   constructor(private http: HttpClient) { }
 
-  apiUrl = "https://libretranslate.com/translate";
-
   getData(): Observable<any> {
     return this.http.get('https://jsonplaceholder.typicode.com/todos/1');
-  }
-
-  addPost(post: any): Observable<any> {
-    return this.http.post<any>(`${this.apiUrl}/posts`, post);
   }
 
 }

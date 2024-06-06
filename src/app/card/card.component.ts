@@ -7,16 +7,14 @@ import {
 import { TranslateService } from '../translate.service';
 import { JsonPipe } from '@angular/common';
 
-import { CommonModule } from "@angular/common";
-import { response } from 'express';
-
+import { RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-card',
   standalone: true,
   templateUrl: './card.component.html',
   styleUrl: './card.component.css',
-  imports: [JsonPipe]
+  imports: [RouterOutlet, RouterLink, JsonPipe]
 })
 
 export class CardComponent implements OnInit {

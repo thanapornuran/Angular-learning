@@ -2,9 +2,14 @@
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 
+import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
+
 @NgModule({
   imports: [
-    HttpClientModule
+    HttpClientModule,
+    BrowserModule,
+    CommonModule // Import CommonModule ที่นี่
   ],
 })
 

@@ -1,7 +1,67 @@
-<main>
-    <section (mouseover)="onMouseOver() ">
-        There's a secret message for you, hover to reveal 👀
-        {{ message }}
-    </section>
-    <app-card> </app-card>
+<main class="p-5">
+  <section (mouseover)="onMouseOver() ">
+    There's a secret message for you, hover to reveal 👀
+    {{ message }}
+  </section>
+
+  <div class="">
+    <h2 class="mt -5 font-bold text-5xl"> สถานการณ์ Covid ในประเทศไทย (ง'̀-'́)ง</h2>
+    <div>
+      <!-- {{ covid | json }} -->
+
+      <div *ngFor="let data of covid; let i = index" class="">
+        <div
+          class="year-show mt-3 font-bold text-4xl text-center content-center bg-[#FFBF00] text-[#271c19] rounded-lg h-40">
+          ปี {{ data.year }}
+        </div>
+        <div class="flex gap-5">
+          <div class="year-show mt-3 text-2xl text-center content-center bg-[#EE4E4E] rounded-lg h-40 w-1/2">
+            <p class="font-bold">
+              จํานวนผู้ป่วยรายใหม่
+            </p>
+            <p>
+              +{{ data.new_case }} คน
+            </p>
+          </div>
+          <div class="year-show mt-3 text-2xl text-center content-center bg-[#A34343] rounded-lg h-40 w-1/2">
+            <p class="font-bold">
+              จํานวนผู้ป่วยสะสม
+            </p>
+            <p>
+              {{ data.total_case }} คน
+            </p>
+          </div>
+        </div>
+        <div class="flex gap-5">
+          <div class="year-show mt-3 text-2xl text-center content-center bg-[#00215E] rounded-lg h-40 w-1/2">
+            <p class="font-bold">
+              จํานวนผู้ป่วยตายรายใหม่
+            </p>
+            <p>
+              + {{ data.new_death }} คน
+            </p>
+          </div>
+          <div class="year-show mt-3 text-2xl text-center content-center bg-[#40A578] rounded-lg h-40 w-1/2">
+            <p class="font-bold">
+              จํานวนผู้ป่วยรักษาหายรายใหม่
+            </p>
+            <p>
+              +{{ data.new_recovered }} คน
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <nav class="flex-col">
+      <div>
+        <a class="button bg-blue-700" routerLink="/translate" ariaCurrentWhenActive="page">translate</a>
+      </div>
+      <div>
+        <a class="button bg-blue-700" routerLink="/profile" ariaCurrentWhenActive="page">profile</a>
+      </div>
+    </nav>
+    <router-outlet></router-outlet>
+    
+  </div>
 </main>
