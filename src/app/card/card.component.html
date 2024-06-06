@@ -4,11 +4,16 @@
     <p class="card-text mt-3">what is your word ?
     </p>
     <form action="" class="grid mt-3">
-      <input type="text" class="text-[#271c19] w-1/2 h-10 p-1">
+      <input (input)="onChangeInputWord($event)" type="text" class="text-[#271c19] w-1/2 h-10 p-1">
       <button type="button"
       class="btn btn-primary mt-5 p-3 bg-[#ffc0ad] rounded-md font-semibold text-[#271c19]">submit</button>
     </form>
     <p class="mt-5 text-lg">This is your translate!</p>
-    <p class="mt-5 text-2xl">ukaukaukauka</p>
+    <p>{{ inputWord }}</p>
   </div>
+</div>
+
+<div>
+  <h2>Data from API:</h2>
+  <pre>{{ data | json }}</pre>
 </div>

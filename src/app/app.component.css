@@ -1,6 +1,7 @@
-body {
+main {
     background-color: #271c19;
-    color: #fff3ec
+    color: #fff3ec;
+    height: 100vh;
 }
 
 h1 {

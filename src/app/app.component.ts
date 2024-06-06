@@ -11,6 +11,14 @@ import { CardComponent } from './card/card.component';
 })
 
 export class AppComponent {
-  title = 'angular-learning';
+  message = "";
+  data: any;
+
+  onMouseOver() {
+    this.message = 'Way to go 🚀';
+    console.log("mouse enter");
+  }
+
+
 }
 
